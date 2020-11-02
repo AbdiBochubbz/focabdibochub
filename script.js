@@ -21,6 +21,5 @@ else{
 alert("Please Fill in everything correctly")
 }
 }
-//-->
 
-//</script>
+

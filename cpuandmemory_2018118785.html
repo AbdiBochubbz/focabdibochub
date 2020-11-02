@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+<title>FoC</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+</head>
+
+
+
+
+<!-- Switch images script -->
+<script type="text/javascript">
+  function swapImage(id,primary,secondary) {
+    src=document.getElementById(id).src;
+    if (src.match(primary)) {
+      document.getElementById(id).src=secondary;
+    } else {
+      document.getElementById(id).src=primary;
+    }
+  }
+</script>
+
+
+
+
+<body style="background-color:LightCyan;">
+
+<header style="background-color:skyblue;">
+  <h2 style="font-family:jokerman; text-align:center;">CPU and Memory</h2>
+</header>
+
+<section>
+  <nav  style="background-color:LightCyan;">
+    <ul>
+      <li><h5 style="font-family:jokerman;"><a href="index.html">Course</a></h5></li>
+      <li><h5 style="font-family:jokerman;"><a href="project_2018118785.html">Project</a></h5></li>
+	  <li><h5 style="font-family:jokerman;"><a href="concepts_2018118785.html">Concepts</a></h5></li>
+	  <li><h5 style="font-family:jokerman;"><a href="database_2018118785.html">Databases</a></h5></li>
+	  <li><h5 style="font-family:jokerman;"><a href="documentation_2018118785.html">Documentation</a></h5></li>
+      <li><h5 style="font-family:jokerman;"><a href="aboutme_2018118785.html">Dev Team</a></h5></li>
+    </ul>
+  </nav>
+
+
+  <article>
+ 
+<h3 style="font-family:jokerman; text-align:center;">CPU BASICS</h3>
+<p style="font-family:courier; text-align:center;">A CPU consists of three parts: </p> 
+<li style="font-family:courier;"> the arithmetic/logic unit, which
+contains the circuitry that performs operations on data (such as addition and
+subtraction);</li> 
+<li style="font-family:courier;">the control unit, which contains the circuitry for coordinating the
+machine’s activities; and</li> 
+<li style="font-family:courier;">the register unit, which contains data storage cells
+(similar to main memory cells), called registers, that are used for temporary
+storage of information within the CPU. Some of the registers within the register unit are considered general-purpose
+registers whereas others are special-purpose registers. <br></br> </li>
+
+<p style="font-family:courier; text-align:center;">
+
+<b> General-purpose registers</b> serve as temporary holding places for data being
+manipulated by the CPU. These registers hold the inputs to the arithmetic/logic
+unit’s circuitry and provide storage space for results produced by that unit. To perform
+an operation on data stored in main memory, the control unit transfers the
+data from memory into the general-purpose registers, informs the arithmetic/logic
+unit which registers hold the data, activates the appropriate circuitry within the
+arithmetic/logic unit, and tells the arithmetic/logic unit which register should
+receive the result.
+
+</p>
+   
+   
+   <center><img src="cpumemorybus.png" alt="CPU&Memory"  width="562" height="300"></center>
+   
+
+<p style="font-family:courier; text-align:center;">For the purpose of transferring bit patterns, a machine’s CPU and main memory
+are connected by a collection of wires called a <b>bus</b>. Through
+this bus, the CPU extracts (reads) data from main memory by supplying the address
+of the pertinent memory cell along with an electronic signal telling the memory circuitry
+that it is supposed to retrieve the data in the indicated cell. In a similar manner,
+the CPU places (writes) data in memory by providing the address of the
+destination cell and the data to be stored together with the appropriate electronic signal
+telling main memory that it is supposed to store the data being sent to it. </p>
+
+<p style="font-family:courier; text-align:center;">If the control unit is designed to extract the program
+from memory, decode the instructions, and execute them, the program that the
+machine follows can be changed merely by changing the contents of the computer’s
+memory instead of rewiring the CPU.
+The idea of storing a computer’s program in its main memory is called
+the stored-program concept and has become the standard approach used
+today.</p>
+
+<p style="font-family:courier; text-align:center;">To apply the stored-program concept, CPUs are designed to recognize instructions
+encoded as bit patterns. This collection of instructions along with the
+encoding system is called the machine language. An instruction expressed in
+this language is called a machine-level instruction or, more commonly, a
+machine instruction.</p>
+
+
+
+<p style="font-family:courier; text-align:center;">Based on this design, the task of adding two values stored in main memory 
+then subtracting a value from the result involves more than the mere execution of the addition and subtraction operation. 
+The data must be transferred from main memory to registers within the CPU, 
+the values must be added with the result being placed in a register, this same value is subtracted by another value with the
+result being placed in a register, and the result must then be stored in a memory cell. </p>
+
+
+
+
+<p style="font-family:courier; text-align:center;">
+This entire process is summarized by the following animation.
+</p>
+
+
+
+
+
+
+
+<p>
+
+<center>
+
+<img
+  id="cpu"
+  src="cpu0.png"
+  title=""
+  alt="Fig.: CPU."
+/> <script src="script.js"></script>
+<span style="font-size:0.8em">
+  Click buttons a second time to toggle the command's results after being executed.
+</span>
+</center>
+</p>
+
+
+
+
+
+<div class="row">
+  <div class="column">
+  
+  <p>
+
+    <button id="cpu" onclick="swapImage('cpu','cpu0.png','cpu1.png')"><dfn title="Two values are stored in main memory.">INPUT</dfn></button><br></br>
+	<button id="cpu" onclick="swapImage('cpu','cpu2.png','cpu2a.png')"><dfn title="The data is transferred from main memory [0] to registers [R0] within the CPU.">LOAD R0 0</dfn></button><br></br>
+	<button id="cpu" onclick="swapImage('cpu','cpu3.png','cpu3a.png')"><dfn title="The data is transferred from main memory [1] to registers [R1] within the CPU.">LOAD R1 1</dfn></button><br></br>
+	<button id="cpu" onclick="swapImage('cpu','cpu4.png','cpu4a.png')"><dfn title="The values [R0] [R1] must be added with the result being placed in a register [R2].">ADD R2 R0 R1</dfn></button><br></br>
+	<button id="cpu" onclick="swapImage('cpu','cpu5.png','cpu5a.png')"><dfn title="The value [R1] is subtracted from [R2] with the result being placed in a register [R3].">SUB R3 R2 R1</dfn></button><br></br>
+	<button id="cpu" onclick="swapImage('cpu','cpu6.png','cpu6a.png')"><dfn title="The result is then stored in a memory cell.">STORE 8 R3</dfn></button><br></br>
+	<button id="cpu" onclick="swapImage('cpu','cpu7.png','cpu7.png')"><dfn title="The program is halted/stops execution.">HALT</dfn></button><br></br>
+	
+	</p>  
+  
+  </div>
+  <div class="column">
+	<div class="myDIV">
+  
+		<center><img src="assemblyandmachinelanguageinstructionset.png" alt="assemblyandmachinelanguageinstructionset"  width="742" height="620"></center>
+		
+		
+	</div>
+	
+  
+  
+	<div class="hide">
+		The assembly / machine language instructions are documented on this table.
+	</div>
+  
+  </div>
+</div>
+
+
+
+
+<br></br>
+<p style="font-family:courier; text-align:center;">
+  This simulator is a complete stored program computer. It uses a control unit that translates machine language commands into 
+  the microinstructions that carry out the operation. Instructions entered in main memory locations in assembly language are 
+  automatically assembled into machine language. 
+  In addition, the concept of microprogramming is intuitive in that the bits of each microprogram simply encocde the positions of 
+  the knobs and switches.
+</p>
+
+
+  </article>
+</section>
+
+<h5 style="font-family:jokerman;"><a href="project_2018118785.html">Back</a></h5>
+
+
+<footer style="background-color:skyblue;">
+  <p>@ Powered by UB</p>
+</footer>
+
+</body>
+</html>
