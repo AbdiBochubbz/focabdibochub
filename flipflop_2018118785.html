@@ -51,14 +51,16 @@ be 1. This guarantees that the output of the OR gate will remain 1,
 even when the upper input to the flip-flop is changed
 back to 0. In summary, the flip-flop’s output has become 1, and this
 output value will remain after the upper input returns to 0.
-
+		<p>Input A:</p>
 <p>
-<button onclick="document.getElementById('myImage').src='flipfloponoffon.png'">Upper Input: On / Lower Input: Off</button> <button onclick="document.getElementById('myImage').src='flipflopoffoffon.png'">Upper Input: Off / Lower Input: Off</button>
+<button onclick="document.getElementById('myImage').src='flipfloponoffon.png'">On</button> <button onclick="document.getElementById('myImage').src='flipflopoffoffon.png'">Off</button>
 	
 
 <center> <img id="myImage" src="flipflopoffoffoff.png" style="width:400px"> </center>
 
-<button onclick="document.getElementById('myImage').src='flipflopoffonoff.png'">Upper Input: Off / Lower Input: On</button> 
+	<p>Input Set B:</p>
+	
+<button onclick="document.getElementById('myImage').src='flipflopoffonoff.png'">On</button> <button onclick="document.getElementById('myImage').src='flipflopoffoffoff.png'">Off</button> 
 	
 </p>
 In a similar manner, temporarily placing the value 1 on the lower input will
