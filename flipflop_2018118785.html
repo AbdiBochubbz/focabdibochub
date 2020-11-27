@@ -6,32 +6,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 100px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-	
-	
-	
-	
-	
 </head>
 <body style="background-color:LightCyan;">
 
@@ -77,29 +51,16 @@ be 1. This guarantees that the output of the OR gate will remain 1,
 even when the upper input to the flip-flop is changed
 back to 0. In summary, the flip-flop’s output has become 1, and this
 output value will remain after the upper input returns to 0.
-		
-<div class="row">
-  <div class="column" style="background-color:#A2D2E9;">
-    <h2 style="font-family:jokerman;">Input A:</h2>
-    <p>
-       <button onclick="document.getElementById('myImage').src='flipfloponoffon.png'">On</button> <button onclick="document.getElementById('myImage').src='flipflopoffoffon.png'">Off</button>
-    </p>	
-  </div>
-  <div class="column" style="background-color:#83D0F5;">
-    <h2 style="font-family:jokerman;">Input B:</h2>
-    <p>	
-       <button onclick="document.getElementById('myImage').src='flipflopoffonoff.png'">On</button> <button onclick="document.getElementById('myImage').src='flipflopoffoffoff.png'">Off</button> 	
-    </p>
-  </div>
-</div>
 
-	  
-	  
-	<p>
+<p>
+<button onclick="document.getElementById('myImage').src='flipfloponoffon.png'">Upper Input: On / Lower Input: Off</button> <button onclick="document.getElementById('myImage').src='flipflopoffoffon.png'">Upper Input: Off / Lower Input: Off</button>
 	
-	  <center> <img id="myImage" src="flipflopoffoffoff.png" style="width:400px"> </center>
-	</p>
+
+<center> <img id="myImage" src="flipflopoffoffoff.png" style="width:400px"> </center>
+
+<button onclick="document.getElementById('myImage').src='flipflopoffonoff.png'">Upper Input: Off / Lower Input: On</button> <button onclick="document.getElementById('myImage').src='flipflopononon.png'">Upper & Lower Input: On</button>
 	
+</p>
 In a similar manner, temporarily placing the value 1 on the lower input will
 force the flip-flop’s output to be 0, and this output will persist after the input
 value returns to 0.</p>		
